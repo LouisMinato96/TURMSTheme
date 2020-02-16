@@ -1,1 +1,23 @@
-<p>cube works!</p>
+<div class="cube-container background-color">
+
+    <div 
+        class="box-container" 
+        [ngStyle]="{
+            'left' : 'calc( 50% - '+ blockUnit/2 +'px)',
+            'top' : 'calc( 50% - '+ blockUnit/2 +'px)',
+            'width.px' : blockUnit,
+            'height.px' : blockUnit
+        }">
+
+        <div class="square-container">
+            <div class="square" [class.face1]="initiated" [ngClass]="unitGlowClass" ></div>
+            <div class="square" [class.face2]="initiated" [ngClass]="unitGlowClass" ></div>
+            <div class="square" [class.face3]="initiated" [ngClass]="unitGlowClass" ></div>
+            <div class="square" [class.face4]="initiated" [ngClass]="unitGlowClass" ></div>
+            <div class="square" [class.face5]="initiated" [ngClass]="unitGlowClass" ></div>
+            <div class="square" [class.face6]="initiated" [ngClass]="unitGlowClass" ></div>
+        </div>
+
+    </div>
+
+</div>
