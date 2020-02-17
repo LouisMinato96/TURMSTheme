@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cube',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cube.component.scss']
 })
 export class CubeComponent implements OnInit {
+
+  @Input() unitCellSize ;
 
   blockUnit = 300;
   initiated: boolean = false;
@@ -27,6 +29,7 @@ export class CubeComponent implements OnInit {
     setTimeout(() => {
       this.initiated = true;
     },200);
+    this.blockUnit = typeof this.unitCellSize != 'undefined' ? this.unitCellSize : 300;
     this.unitGlowClass = 'unit-Glow-' + this.getRandomInt( 1, 5);
     this.face1_AnimationDuration = this.getRandomInt(8000, 10000) + 'ms';
     this.face2_AnimationDuration = this.getRandomInt(8000, 10000) + 'ms';

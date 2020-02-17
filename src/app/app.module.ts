@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularHomeComponent } from './components/angular-home/angular-home.component';
 import { CubeComponent } from './components/cube/cube.component';
+import { CustomGalaxyComponent } from './components/custom-galaxy/custom-galaxy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AngularHomeComponent,
-    CubeComponent
+    CubeComponent,
+    CustomGalaxyComponent
   ],
   imports: [
     BrowserModule,
