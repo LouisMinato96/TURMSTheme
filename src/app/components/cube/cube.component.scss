@@ -1,6 +1,7 @@
 :host{
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
+    display: block;
     // position: absolute;
     // top: 0px;
     // left: 0px;
@@ -13,8 +14,8 @@
 }
 
 .cube-container{
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     position: relative;
 
     &.background-color{
@@ -24,6 +25,8 @@
     .box-container{
         border: 2px solid white;
         position: absolute;
+        left : '0px';
+        top : '0px';
         perspective: var(--block-unit-px);
 
         .square-container{
@@ -40,7 +43,7 @@
                         translateY( 0px )
                         translateZ( 0px ) 
                         rotateX(0deg) 
-                        rotateY(45deg) 
+                        rotateY(0deg) 
                         rotateZ(0deg);
 
             .square{
@@ -52,11 +55,16 @@
                 background-color: var(--box-1-color);
                 transition: 800ms ease-in-out;
 
+                display: block;
+                opacity: .8;
+                transform-style: preserve-3d;
+                perspective: var(--block-unit-px);
+
+                animation-name: glowAnimation;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
                 &.face1{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(0deg) 
                                 rotateY(0deg) 
                                 rotateZ(0deg)
@@ -65,10 +73,6 @@
                                 translateZ( calc( var(--block-unit-px) * 0.2 ) ) ;
                 }
                 &.face2{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(0deg) 
                                 rotateY(90deg) 
                                 rotateZ(0deg)
@@ -77,10 +81,6 @@
                                 translateZ( calc( var(--block-unit-px) * 0.2 ) ) ;
                 }
                 &.face3{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(0deg) 
                                 rotateY(90deg) 
                                 rotateZ(0deg)
@@ -89,10 +89,6 @@
                                 translateZ( calc( var(--block-unit-px) * -0.2 ) ) ;
                 }
                 &.face4{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(0deg) 
                                 rotateY(0deg) 
                                 rotateZ(0deg)
@@ -101,10 +97,6 @@
                                 translateZ( calc( var(--block-unit-px) * -0.2 ) ) ;
                 }
                 &.face5{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(90deg) 
                                 rotateY(0deg) 
                                 rotateZ(0deg)
@@ -113,10 +105,6 @@
                                 translateZ( calc( var(--block-unit-px) * 0.2 ) );
                 }
                 &.face6{
-                    display: block;
-                    opacity: .4;
-                    transform-style: preserve-3d;
-                    perspective: var(--block-unit-px);
                     transform:  rotateX(90deg) 
                                 rotateY(0deg) 
                                 rotateZ(0deg)
