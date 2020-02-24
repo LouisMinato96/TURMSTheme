@@ -1,35 +1,42 @@
 <div class="cameraView background-color" >
-  <div class="galaxy_container "
-      [class.tilt45]="randomize_box"
-      [ngStyle]="{
-      'transform-origin' : '50% 50% '+galaxy_2d_map_container_POS+'px'
-    }">
-    <div 
-      class="galaxy"
-      [ngStyle]="{
-        'transform' : 'translateX('+ galaxy_POS_X +'px) translateY('+ galaxy_POS_Y +'px)'
+  <div class="firstPersonView"
+    [ngStyle]="{
+      'transform' : 'translateX('+ camPos_X +'px) translateY('+ camPos_Y +'px) translateZ('+ camPos_Z +'px)'
+      }">
+  
+    <div class="galaxy_container "
+        [class.tilt45]="randomize_box"
+        [ngStyle]="{
+        'transform-origin' : '50% 50% '+galaxy_2d_map_container_POS+'px'
       }">
       <div 
-        class="galaxy_2d_map_container"
-        [ngStyle]="{'transform': 'translateZ('+ galaxy_2d_map_container_POS +'px)'}"
-        >
-        <div class="galaxy_2d_map">
-          <ng-container *ngFor="let cObj_row of GALAXY_2D_MAP; let i = index;">
-            <div class="app-cube-row">
-              <ng-container *ngFor="let cObj of cObj_row; let j = index;">
-                <div class="app-cube-unit" >
-                  <app-cube 
-                    [ngStyle]="{'transform': 'translateZ('+ getCubePos(i,j) +'px)'}"
-                    [unitCellSize]="UNIT_SIZE" 
-                    [showFiveFaces]="showFiveFaces(i,j)" 
-                    *ngIf="cObj == 1"
-                  ></app-cube>
-                </div>
-              </ng-container>
-            </div>
-          </ng-container>
+        class="galaxy"
+        [ngStyle]="{
+          'transform' : 'translateX('+ galaxy_POS_X +'px) translateY('+ galaxy_POS_Y +'px)'
+        }">
+        <div 
+          class="galaxy_2d_map_container"
+          [ngStyle]="{'transform': 'translateZ('+ galaxy_2d_map_container_POS +'px)'}"
+          >
+          <div class="galaxy_2d_map">
+            <ng-container *ngFor="let cObj_row of GALAXY_2D_MAP; let i = index;">
+              <div class="app-cube-row">
+                <ng-container *ngFor="let cObj of cObj_row; let j = index;">
+                  <div class="app-cube-unit" >
+                    <app-cube 
+                      [ngStyle]="{'transform': 'translateZ('+ getCubePos(i,j) +'px)'}"
+                      [unitCellSize]="UNIT_SIZE" 
+                      [showFiveFaces]="showFiveFaces(i,j)" 
+                      *ngIf="cObj == 1"
+                    ></app-cube>
+                  </div>
+                </ng-container>
+              </div>
+            </ng-container>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>

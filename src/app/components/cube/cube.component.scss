@@ -22,6 +22,20 @@
     position: relative;
     transform-style: preserve-3d;
 
+    &.rotateCube{
+        animation-name : rotateCube; 
+        animation-duration : 4s; 
+        animation-delay : 0s; 
+        animation-iteration-count : infinite;  
+        animation-timing-function : linear; 
+        animation-direction: normal;
+    }
+
+    @keyframes rotateCube {
+        0%{  transform: rotateX(0deg) rotateY(0deg) ; }
+        100%{  transform: rotateX(360deg) rotateY(360deg) ; }
+    }
+
     .box-container{
         // border: 2px solid white;
         position: absolute;
