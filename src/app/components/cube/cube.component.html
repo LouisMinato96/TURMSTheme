@@ -1,39 +1,43 @@
 <div class="cube-container">
 
-    <div 
-        class="box-container" 
-        [ngStyle]="{
-            'width.px' : blockUnit,
-            'height.px' : blockUnit
-        }">
+<div class="box-container" [ngStyle]="{
+        'width.px' : blockUnit,
+        'height.px' : blockUnit
+}">
 
         <div class="square-container">
-            <div    class="square" 
-                    [class.face1]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face1_AnimationDuration   }"></div>
-            <div    class="square" 
-                    [class.face2]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face2_AnimationDuration   }"></div>
-            <div    class="square" 
-                    [class.face3]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face3_AnimationDuration   }"></div>
-            <div    class="square" 
-                    [class.face4]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face4_AnimationDuration   }"></div>
-            <div    class="square" 
-                    [class.face5]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face5_AnimationDuration   }"></div>
-            <div    class="square" 
-                    [class.face6]="initiated" 
-                    [ngClass]="unitGlowClass" 
-                    [ngStyle]="{    'animation-duration'    :   face6_AnimationDuration   }"></div>
+                <div class="square" [class.face1]="initiated" [ngClass]="unitGlowClass" 
+                        [ngStyle]="{    
+                        'animation-duration'    :   face1_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
+                <div class="square" *ngIf="showFiveFaces" [class.face2]="initiated" [ngClass]="unitGlowClass"
+                        [ngStyle]="{    
+                        'animation-duration'    :   face2_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
+                <div class="square" *ngIf="showFiveFaces" [class.face3]="initiated" [ngClass]="unitGlowClass"
+                        [ngStyle]="{    
+                        'animation-duration'    :   face3_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
+                <div class="square" *ngIf="showFiveFaces" [class.face4]="initiated" [ngClass]="unitGlowClass"
+                        [ngStyle]="{    
+                        'animation-duration'    :   face4_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
+                <div class="square" *ngIf="showFiveFaces" [class.face5]="initiated" [ngClass]="unitGlowClass"
+                        [ngStyle]="{    
+                        'animation-duration'    :   face5_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
+                <div class="square" *ngIf="showFiveFaces" [class.face6]="initiated" [ngClass]="unitGlowClass"
+                        [ngStyle]="{    
+                        'animation-duration'    :   face6_AnimationDuration   ,
+                        'animation-name'    :       animationName 
+                }"></div>
         </div>
 
-    </div>
+</div>
 
 </div>

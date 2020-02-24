@@ -2,6 +2,9 @@
     width: fit-content;
     height: fit-content;
     display: block;
+    transition: 1s;
+    transform-style: preserve-3d;
+    // perspective: var(--block-unit-px);
     // position: absolute;
     // top: 0px;
     // left: 0px;
@@ -14,37 +17,35 @@
 }
 
 .cube-container{
-    width: fit-content;
-    height: fit-content;
+    width: var(--block-unit-px);
+    height: var(--block-unit-px);
     position: relative;
-
-    &.background-color{
-        background-color: var(--bw-1-color);
-    }
+    transform-style: preserve-3d;
 
     .box-container{
-        border: 2px solid white;
+        // border: 2px solid white;
         position: absolute;
-        left : '0px';
-        top : '0px';
-        perspective: var(--block-unit-px);
+        left : 0px;
+        top : 0px;
+        // perspective: var(--block-unit-px);
+        transform-style: preserve-3d;
 
         .square-container{
-            width: 40%;
-            height: 40%;
+            width: 60%;
+            height: 60%;
             position: absolute;
-            top: 30%;
-            left: 30%;
+            top: 20%;
+            left: 20%;
             // border: 1px solid red;
 
             transform-style: preserve-3d;
-            perspective: var(--block-unit-px);
+            // perspective: var(--block-unit-px);
             transform:  rotateX(0deg) 
                         rotateY(0deg) 
                         rotateZ(0deg)
                         translateX( 0px )
                         translateY( 0px )
-                        translateZ( 0px ) ;
+                        translateZ( calc( var(--block-unit-px) * 0 ) ) ;
 
             .square{
                 width: 100%;
@@ -58,9 +59,9 @@
                 display: block;
                 opacity: .8;
                 transform-style: preserve-3d;
-                perspective: var(--block-unit-px);
+                transform-origin: 50% 50% 0;
+                // perspective: var(--block-unit-px);
 
-                animation-name: glowAnimation;
                 animation-iteration-count: infinite;
                 animation-timing-function: linear;
 
@@ -70,7 +71,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * 0.2 ) ) ;
+                                translateZ( calc( var(--block-unit-px) * 0.3 ) ) ;
                 }
                 &.face2{
                     transform:  rotateX(0deg) 
@@ -78,7 +79,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * 0.2 ) ) ;
+                                translateZ( calc( var(--block-unit-px) * 0.3 ) ) ;
                 }
                 &.face3{
                     transform:  rotateX(0deg) 
@@ -86,7 +87,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * -0.2 ) ) ;
+                                translateZ( calc( var(--block-unit-px) * -0.3 ) ) ;
                 }
                 &.face4{
                     transform:  rotateX(0deg) 
@@ -94,7 +95,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * -0.2 ) ) ;
+                                translateZ( calc( var(--block-unit-px) * -0.3 ) ) ;
                 }
                 &.face5{
                     transform:  rotateX(90deg) 
@@ -102,7 +103,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * 0.2 ) );
+                                translateZ( calc( var(--block-unit-px) * 0.3 ) );
                 }
                 &.face6{
                     transform:  rotateX(90deg) 
@@ -110,7 +111,7 @@
                                 rotateZ(0deg)
                                 translateX( calc( var(--block-unit-px) * 0 ) )
                                 translateY( calc( var(--block-unit-px) * 0 ) )
-                                translateZ( calc( var(--block-unit-px) * -0.2 ) );
+                                translateZ( calc( var(--block-unit-px) * -0.3 ) );
                 }
             }
         }

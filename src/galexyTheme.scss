@@ -1,25 +1,20 @@
 .unit-Glow-1{
-  box-shadow: 0px 0px 5px 0px #18ffff, 0px 0px 10px 0px #18ffff inset;
+  box-shadow: 0px 0px 8px 2px #18ffff, 0px 0px 10px 2px #18ffff inset;
 }
 .unit-Glow-2{
-  box-shadow: 0px 0px 5px 0px #64ffda, 0px 0px 10px 0px #64ffda inset;
+  box-shadow: 0px 0px 8px 2px #64ffda, 0px 0px 10px 2px #64ffda inset;
 }
 .unit-Glow-3{
-  box-shadow: 0px 0px 5px 0px #40c4ff, 0px 0px 10px 0px #40c4ff inset;
+  box-shadow: 0px 0px 8px 2px #40c4ff, 0px 0px 10px 2px #40c4ff inset;
 }
 .unit-Glow-4{
-  box-shadow: 0px 0px 5px 0px #7b1fa2, 0px 0px 10px 0px #7b1fa2 inset;
+  box-shadow: 0px 0px 8px 2px #7b1fa2, 0px 0px 10px 2px #7b1fa2 inset;
 }
 
 @keyframes glowAnimation {
   0%  { opacity: 1; }
-  20% { opacity: .8; }
   40% { opacity: .5; }
   60% { opacity: .7; }
-  65% { opacity: .2; }
-  70% { opacity: .8; }
   75% { opacity: .2; }
-  80% { opacity: .9; }
-  90% { opacity: .7; }
   100% { opacity: 1; }
 }
