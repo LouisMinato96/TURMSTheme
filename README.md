@@ -1,6 +1,6 @@
 # THEMEcomp
 
-![Alt Text](http://everythingwith.in/cdn/screen-recording.gif)
+[Alt Text](http://everythingwith.in/cdn/screen-recording.gif)
 <img src="http://everythingwith.in/cdn/screen-recording.gif" width="40" height="40" />
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
